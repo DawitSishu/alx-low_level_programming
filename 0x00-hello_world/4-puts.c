@@ -1,6 +1,11 @@
 #include <studio.h>
 int main(void)
-{
-puts("\n"Programming is like building a multilingual puzzle");
+/**
+ * main - entry point
+ *
+ *Return: 0 after printing the function
+ */
+{	
+puts("\"Programming is like building a multilingual puzzle");
 return (0);
 }
