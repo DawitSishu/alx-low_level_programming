@@ -6,22 +6,17 @@
  */
 int main(void)
 {
-int i;
-long num1 = 0, num2 = 1,num3 = 0, sum = 0;
-while (true)
+long num1 = 0, num2 = 1, num3 = 0, sum = 0;
+while (num3 <= 4000000)
 {
 num3 = num1 + num2;
-if(num3 > 4000000)
-{
-break;
-}
 num1 = num2;
 num2 = num3;
-if ( num1 % 2 == 0 )
+if (num1 % 2 == 0)
 {
 sum += num1;
 }
 }
-printf("%ld\n",sum);
+printf("%ld\n", sum);
 return (0);
 }
