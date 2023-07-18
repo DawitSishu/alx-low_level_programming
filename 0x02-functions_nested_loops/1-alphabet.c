@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_alphabet - Entery function
+ * print_alphabet - prints the alphabet 
  *
  * Return: nothing
  */
