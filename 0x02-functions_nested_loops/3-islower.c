@@ -3,7 +3,7 @@
  * _islower - checks wheathera character is lowercase
  * @c: the character to be checked
  *
- * Return: 0 on the character is lower-case, 1 the character is not lowercase
+ * Return: 0 on the character is not lower-case, 1 the character is  lowercase
  */
 int _islower(int c)
 {
