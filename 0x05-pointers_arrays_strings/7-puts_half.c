@@ -16,12 +16,13 @@ i--;
 if (i % 2 == 0)
 {
 j = i / 2;
+k = i - j - 1;
 }
 else
 {
 j = (i - 1) / 2;
-}
 k = i - j;
+}
 while (k <= i)
 {
 _putchar(str[k]);
