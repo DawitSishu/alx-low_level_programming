@@ -21,6 +21,7 @@ for (i = 0; i < n && src[i] != '\0'; i++)
 dest[length] = src[i];
 length++;
 }
+length++;
 dest[length] = '\0';
 return (dest);
 }
