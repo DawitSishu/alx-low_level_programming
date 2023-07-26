@@ -7,7 +7,7 @@
  * @src: pointer to the initial string
  * @n: number of bytes
  *
- * Return: nothing
+ * Return: destinaion string
  */
 char *_strncat(char *dest, char *src, int n)
 {
