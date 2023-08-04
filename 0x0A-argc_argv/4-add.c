@@ -9,7 +9,7 @@
 int main(int argc, char **argv)
 {
 int i, j, temp2, result = 0, temp;
-char chk[2];
+char chk[3];
 if (argc == 1)
 {
 printf("%d", 0);
@@ -19,6 +19,10 @@ for (i = 1; i < argc; i++)
 {
 for (j = 0; argv[i][j] != '\0'; j++)
 {
+if (j == 0 && argv[i][j] == '-')
+{
+continue;
+}
 chk[0] = argv[i][j];
 chk[1] = '\0';
 temp2 = atoi(chk);
