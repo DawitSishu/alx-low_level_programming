@@ -8,7 +8,8 @@
 **/
 int main(int argc, char **argv)
 {
-int i, result = 0, temp;
+int i, j, temp2, result = 0, temp;
+char chk[2];
 if (argc == 1)
 {
 printf("%d", 0);
@@ -16,12 +17,19 @@ return (0);
 }
 for (i = 1; i < argc; i++)
 {
-temp = atoi(argv[i]);
-if (temp == 0)
+for (j = 0; argv[i][j] != '\0'; j++)
+{
+chk[0] = argv[i][j];
+chk[1] = '\0';
+temp2 = atoi(chk);
+if (temp2 == 0)
 {
 printf("Error\n");
 return (1);
 }
+}
+temp = atoi(argv[i]);
+
 result += temp;
 }
 printf("%d\n", result);
