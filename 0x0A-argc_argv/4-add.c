@@ -12,7 +12,7 @@ int i, j, temp2, result = 0, temp;
 char chk[3];
 if (argc == 1)
 {
-printf("%d", 0);
+printf("%d\n", 0);
 return (0);
 }
 for (i = 1; i < argc; i++)
@@ -33,7 +33,6 @@ return (1);
 }
 }
 temp = atoi(argv[i]);
-
 result += temp;
 }
 printf("%d\n", result);
