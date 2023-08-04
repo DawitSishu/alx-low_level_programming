@@ -1,48 +1,51 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-* main - gets cents and retiurns the change of cents
-* @argv: array of command lines
+* main - entry point
 * @argc: size of argv
-* Return: 0 if successful 1 if unsuccessful(more or less than 1 argument)
+* @argv: array
+* Return: 0
 **/
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-int i = atoi(argv[1]), count = 0;
+int cents = atoi(argv[1]), change = 0;
 if (argc != 2)
 {
 printf("Error\n");
 return (1);
 }
-while (i > 0)
+while (cents > 0)
 {
-if (i >= 25)
+if (cents >= 25)
 {
-i -= 25;
-count += 1;
+cents -= 25;
+change += 1;
 continue;
 }
-else if (i >= 10)
+if (cents >= 10)
 {
-i -= 10;
-count += 1;
+cents -= 10;
+change += 1;
 continue;
 }
-else if (i >= 5)
+if (cents >= 5)
 {
-i -= 5;
-count += 1;
+cents -= 5;
+change += 1;
 continue;
 }
-else if (i >= 2)
+if (cents >= 2)
 {
-i -= 2;
-count += 1;
+cents -= 2;
+change += 1;
 continue;
 }
-i -= 1;
-count += 1;
+if (cents >= 1)
+{
+cents -= 1;
+change += 1;
 }
-printf("%d\n", count);
+}
+printf("%d\n", change);
 return (0);
 }
