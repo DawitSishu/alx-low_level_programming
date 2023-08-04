@@ -40,11 +40,8 @@ i -= 2;
 count += 1;
 continue;
 }
-if (i >= 1)
-{
 i -= 1;
 count += 1;
-}
 }
 printf("%d\n", count);
 return (0);
