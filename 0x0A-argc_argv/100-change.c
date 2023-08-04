@@ -19,31 +19,31 @@ while (i > 0)
 if (i >= 25)
 {
 i -= 25;
-count++;
+count += 1;
 continue;
 }
 if (i >= 10)
 {
 i -= 10;
-count++;
+count += 1;
 continue;
 }
 if (i >= 5)
 {
 i -= 5;
-count++;
+count += 1;
 continue;
 }
 if (i >= 2)
 {
 i -= 2;
-count++;
+count += 1;
 continue;
 }
 if (i >= 1)
 {
 i -= 1;
-count++;
+count += 1;
 }
 }
 printf("%d\n", count);
