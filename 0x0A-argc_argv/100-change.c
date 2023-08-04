@@ -22,19 +22,19 @@ i -= 25;
 count += 1;
 continue;
 }
-if (i >= 10)
+else if (i >= 10)
 {
 i -= 10;
 count += 1;
 continue;
 }
-if (i >= 5)
+else if (i >= 5)
 {
 i -= 5;
 count += 1;
 continue;
 }
-if (i >= 2)
+else if (i >= 2)
 {
 i -= 2;
 count += 1;
