@@ -20,27 +20,23 @@ if (cents >= 25)
 {
 cents -= 25;
 change += 1;
-continue;
 }
-if (cents >= 10)
+else if (cents >= 10)
 {
 cents -= 10;
 change += 1;
-continue;
 }
-if (cents >= 5)
+else if (cents >= 5)
 {
 cents -= 5;
 change += 1;
-continue;
 }
-if (cents >= 2)
+else if (cents >= 2)
 {
 cents -= 2;
 change += 1;
-continue;
 }
-if (cents >= 1)
+else
 {
 cents -= 1;
 change += 1;
