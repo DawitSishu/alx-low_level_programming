@@ -16,6 +16,10 @@ if (size <= 0)
 return (NULL);
 }
 final_array = (char *)malloc(size * sizeof(char));
+if (final_array == NULL)
+{
+return (NULL);
+}
 for (i = 0; i < size; i++)
 {
 final_array[i] = c;
