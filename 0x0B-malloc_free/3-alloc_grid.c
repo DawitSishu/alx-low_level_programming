@@ -15,6 +15,10 @@ if (width <= 0 || height <= 0)
 return (NULL);
 }
 final_array = (int **) malloc(height * sizeof(int));
+if (final_array == NULL)
+{
+return (NULL);
+}
 for (i = 0; i < height; i++)
 {
 final_array[i] = (int *) malloc(width * sizeof(int));
