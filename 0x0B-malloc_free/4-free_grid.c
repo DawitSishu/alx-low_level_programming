@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * alloc_grid - frees memory allocated  by alloc_grid
+ * free_grid - frees memory allocated  by alloc_grid
  * @grid: the actual grid
  * @height: height of the grid
  *
