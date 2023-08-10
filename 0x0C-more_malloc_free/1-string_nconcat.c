@@ -41,7 +41,7 @@ for (i = 0; i < n1; i++)
 {
 result[i] = s1[i];
 }
-for (i = 0; i <= n1; i++)
+for (i = 0; i <= n2; i++)
 {
 result[n1 + i] = s2[i];
 }
