@@ -46,6 +46,8 @@ for (j = 0; j < size2; j++)
 {
 d->owner[j] = owner[j];
 }
+d->name[i] = '\0';
+d->owner[j] = '\0';
 d->age = age;
 return (d);
 }
