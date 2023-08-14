@@ -30,7 +30,7 @@ if (d->name == NULL)
 free(d);
 return (NULL);
 }
-d->owner = malloc((size1 + 1) * sizeof(char));
+d->owner = malloc((size2 + 1) * sizeof(char));
 if (d->owner == NULL)
 {
 free(d->name);
@@ -41,11 +41,11 @@ for (i = 0; i < size1; i++)
 {
 d->name[i] = name[i];
 }
+d->name[i] = '\0';
 for (j = 0; j < size2; j++)
 {
 d->owner[j] = owner[j];
 }
-d->name[i] = '\0';
 d->owner[j] = '\0';
 d->age = age;
 return (d);
