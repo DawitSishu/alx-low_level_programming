@@ -25,13 +25,13 @@ while (name[size1] != '\0')
 size1++;
 while (owner[size2] != '\0')
 size2++;
-d->name = malloc(size1 * sizeof(char) + 1);
+d->name = malloc((size1 + 1) * sizeof(char));
 if (d->name == NULL)
 {
 free(d);
 return (NULL);
 }
-d->owner = malloc(size2 * sizeof(char) + 1);
+d->owner = malloc((size1 + 1) * sizeof(char));
 if (d->owner == NULL)
 {
 free(d->name);
