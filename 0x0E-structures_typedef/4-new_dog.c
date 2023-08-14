@@ -16,15 +16,14 @@ if (d == NULL)
 {
 return (NULL);
 }
-if (name == NULL || owner == NULL)
+while (name != NULL && name[size1] != '\0')
 {
-free(d);
-return (NULL);
-}
-while (name[size1] != '\0')
 size1++;
-while (owner[size2] != '\0')
+}
+while (owner != NULL && owner[size2] != '\0')
+{
 size2++;
+}
 d->name = malloc((size1 + 1) * sizeof(char));
 if (d->name == NULL)
 {
