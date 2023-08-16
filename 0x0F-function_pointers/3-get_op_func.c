@@ -26,5 +26,5 @@ return (ops[i].f);
 }
 i++;
 }
-return (NULL);
+return (ops[i].f);
 }
