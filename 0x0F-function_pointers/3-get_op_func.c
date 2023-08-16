@@ -17,13 +17,14 @@ op_t ops[] = {
 {NULL, NULL}
 };
 int i;
-
-while (i < 5)
+i = 0;
+while (i <= 4)
 {
-if (*(ops[i].op) == *s && s[0] != '\0')
+if (*(ops[i].op) == *s)
+{
 return (ops[i].f);
+}
 i++;
 }
-i = 0;
-return (0);
+return (ops[i].f);
 }

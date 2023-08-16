@@ -5,12 +5,9 @@
 * @argc: size of argv
 * Return: 0 (success), 98,99,100 (failure/some error)
 **/
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-int num1;
-int num2;
-int (*operation)(int, int);
-
+int (*func_ptr)(int, int);
 if (argc != 4)
 {
 printf("Error\n");
@@ -21,14 +18,12 @@ if (argv[2][1] != '\0')
 printf("Error\n");
 exit(99);
 }
-operation = get_op_func(argv[2]);
-if (operation == NULL)
+func_ptr = get_op_func(argv[2]);
+if (func_ptr == NULL)
 {
 printf("Error\n");
 exit(99);
 }
-num1 = atoi(argv[1]);
-num2 = atoi(argv[3]);
-printf("%d\n", operation(num1, num2));
+printf("%d\n", func_ptr(atoi(argv[1]), atoi(argv[3])));
 return (0);
 }
