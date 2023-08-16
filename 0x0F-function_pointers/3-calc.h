@@ -5,7 +5,6 @@
 *   Author:Dawit Sishu
 *   Desc: header file that has function declarations
 */
-#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 /**
