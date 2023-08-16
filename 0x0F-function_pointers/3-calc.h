@@ -6,6 +6,8 @@
 *   Desc: header file that has function declarations
 */
 #include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * struct op - Struct op
  *
