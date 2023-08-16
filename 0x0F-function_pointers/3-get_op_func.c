@@ -1,4 +1,5 @@
 #include "3-calc.h"
+#include "function_pointers.h"
 /**
  * get_op_func - adds two intigers
  * @s: The character input
