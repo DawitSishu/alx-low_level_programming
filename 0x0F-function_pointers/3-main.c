@@ -7,8 +7,8 @@
 **/
 int main(int argc, char **argv)
 {
-int num1 = atoi(argv[1]);
-int num2 = atoi(argv[3]);
+int a;
+int b;
 int (*operation)(int, int);
 
 if (argc != 4)
@@ -27,6 +27,8 @@ if (operation == NULL)
 printf("Error\n");
 exit(99);
 }
-printf("%d\n", operation(num1, num2));
+a = atoi(argv[1]);
+b = atoi(argv[3]);
+printf("%d\n", operation(a, b));
 return (0);
 }
