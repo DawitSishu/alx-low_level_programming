@@ -18,9 +18,9 @@ op_t ops[] = {
 };
 int i;
 i = 0;
-while (ops[i].op != NULL)
+while (i <= 4)
 {
-if (strcmp(ops[i].op, s) == 0)
+if (*(ops[i].op) == *s && s[0] != '\0')
 {
 return (ops[i].f);
 }
