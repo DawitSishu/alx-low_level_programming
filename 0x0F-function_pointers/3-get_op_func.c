@@ -18,7 +18,7 @@ op_t ops[] = {
 };
 int i;
 i = 0;
-while (i < 5)
+while (i <= 4)
 {
 if (*(ops[i].op) == *s && s[0] != '\0')
 {
@@ -26,5 +26,5 @@ return (ops[i].f);
 }
 i++;
 }
-return (NULL);
+return (0);
 }
