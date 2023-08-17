@@ -13,6 +13,11 @@ va_list numbers;
 va_start(numbers, n);
 for (i = 0; i < n; i++)
 {
+if (va_arg(numbers, char*) == NULL)
+{
+printf("(nil)");
+continue;
+}
 printf("%s", va_arg(numbers, char*));
 if (separator != NULL && (i + 1 != n))
 printf("%s", separator);
