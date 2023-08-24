@@ -9,20 +9,20 @@
 list_t *add_node(list_t **head, const char *str)
 {
 list_t *tmp = malloc(sizeof(list_t));
-int len = 0, i = 0;
-
+int len = 0;
+char *str2;
 if (tmp == NULL)
 {
 return (NULL);
 }
-while (str[i] != '\0')
+str2 = strdup(str);
+while (str[len] != '\0')
 {
-tmp->str[i] = str[i];
 len++;
-i++;
 }
+tmp->str = str2;
 tmp->len = len;
 tmp->next = *head;
 *head = tmp;
-return (tmp);
+return (*head);
 }
