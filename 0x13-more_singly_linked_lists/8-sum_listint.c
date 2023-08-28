@@ -1,7 +1,7 @@
 #include "lists.h"
 /**
 * sum_listint - sums all the lists' data
-* @head: actual head of list
+* @head: pointer to head of list
 *
 * Return: 0 if empty, otherwise sum of all n of lists
 */
