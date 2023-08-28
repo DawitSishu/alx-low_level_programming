@@ -13,6 +13,4 @@ temp = *head;
 *head = (*head)->next;
 free(temp);
 }
-
-*head = NULL;
 }
