@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
-* sum_listint - sums all the lists' data
+* insert_nodeint_at_index - sums all the lists' data
 * @head: actual head of list
 * @idx: index in which the node is added
 * @n: the number to be added onthe index
@@ -10,7 +10,7 @@
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 listint_t *node = malloc(sizeof(listint_t));
-unsigned pos = 0;
+unsigned int pos = 0;
 listint_t *tmp_next = *head;
 listint_t *tmp_prev = NULL;
 if (node == NULL || head == NULL || *head == NULL)
