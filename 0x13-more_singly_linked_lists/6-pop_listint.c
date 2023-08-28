@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
-* free_listint2 - removes first elt from list
+* pop_listint - removes first elt from list
 * @head: actual head of list
 *
 * Return: 0 if empty, otherwise data of the elt removed
