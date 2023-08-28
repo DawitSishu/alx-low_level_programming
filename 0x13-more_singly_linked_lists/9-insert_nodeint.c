@@ -13,7 +13,7 @@ listint_t *node = malloc(sizeof(listint_t));
 unsigned int pos = 0;
 listint_t *tmp_next = *head;
 listint_t *tmp_prev = NULL;
-if (node == NULL || head == NULL || *head == NULL)
+if (node == NULL || head == NULL)
 {
 return (NULL);
 }
