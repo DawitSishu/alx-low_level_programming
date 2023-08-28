@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <string.h>
 /**
-* add_node -  adds a new node at the beginning of a listint_t list.
+* add_nodeint -  adds a new node at the beginning of a listint_t list.
 * @head: actual head address of the list
 * @n: the number to be added on the head
 *
