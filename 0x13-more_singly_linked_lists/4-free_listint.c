@@ -4,11 +4,12 @@
 * @head: head address of the list
 *
 */
-void free_listint(listint_t *head);
+void free_listint(listint_t *head)
 {
-while (head != NULL)
+while (*head != NULL)
 {
-free(head);
-head = head->next;
+*head = (*head)->next;
+free(temp);
 }
+*head = NULL; 
 }
