@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
-* get_nodeint_at_index - removes first elt from list
+* get_nodeint_at_index - gets elt from list at index
 * @head: pointer to head of list
 * @index: index of node starting from 0
 *
