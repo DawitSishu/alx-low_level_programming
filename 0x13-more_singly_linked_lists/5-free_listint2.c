@@ -10,9 +10,11 @@ listint_t *temp;
 
 while (head != NULL)
 {
+while (*head != NULL)
+{
 temp = *head;
 *head = (*head)->next;
-free(temp);
+free(temp);S
 }
-
+}
 }
