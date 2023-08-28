@@ -27,5 +27,5 @@ while (ptr->next != NULL)
 ptr = ptr->next;
 }
 ptr->next = tmp;
-return (*head);
+return (tmp);
 }
