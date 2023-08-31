@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdbool.h> 
+#include <stdbool.h>
 bool is_really_binary(const char *b);
 
 /**
