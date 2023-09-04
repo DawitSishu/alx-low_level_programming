@@ -28,13 +28,7 @@ if (!size)
 return (0);
 
 read(fle, size, letters);
-result = read(fle, size, letters);
-if (result == -1)
-{
-free(size);
-close(fle);
-return (0);
-}
+
 size[letters] = '\0';
 
 for (i = 0; size[i] != '\0'; i += 1)
