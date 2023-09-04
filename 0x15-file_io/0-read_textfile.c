@@ -10,37 +10,28 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-int fle, len, i, result;
-char *size;
+ssize_t fle, rand, written;
+char *buffer;
 
 if (filename == NULL)
 return (0);
-fle = open(filename, O_RDONLY);
 
-if (fle == -1)
+buffer = malloc(sizeof(char) * letters);
+if (buffer == NULL)
+return (0);
+
+fle = open(filename, O_RDONLY);
+rand = read(fle, buffer, letters);
+written = write(STDOUT_FILENO, buffer, r);
+
+if (fle == -1 || rand == -1 || written == -1 || written != rand)
 {
-close(fle);
+free(buffer);
 return (0);
 }
 
-size = malloc(sizeof(char) * letters);
-if (!size)
-return (0);
+free(buffer);
+close(fle);
 
-read(fle, size, letters);
-
-size[letters] = '\0';
-
-for (i = 0; size[i] != '\0'; i += 1)
-len += 1;
-
-result = close(fle);
-if (result != 0)
-exit(-1);
-result = write(STDOUT_FILENO, size, len);
-if (result != len)
-return (0);
-free(size);
-
-return (len);
+return (written);
 }
