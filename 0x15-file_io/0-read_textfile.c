@@ -18,13 +18,23 @@ return (0);
 fle = open(filename, O_RDONLY);
 
 if (fle == -1)
+{
+close(fle);
 return (0);
+}
 
 size = malloc(sizeof(char) * letters);
 if (!size)
 return (0);
 
 read(fle, size, letters);
+result = read(fle, size, letters);
+if (result == -1)
+{
+free(size);
+close(fle);
+return (0);
+}
 size[letters] = '\0';
 
 for (i = 0; size[i] != '\0'; i += 1)
