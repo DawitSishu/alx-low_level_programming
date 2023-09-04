@@ -30,7 +30,7 @@ size[letters] = '\0';
 for (i = 0; size[i] != '\0'; i += 1)
 len += 1;
 
-result = close(f);
+result = close(fle);
 if (result != 0)
 exit(-1);
 result = write(STDOUT_FILENO, size, len);
