@@ -22,7 +22,7 @@ return (0);
 
 fle = open(filename, O_RDONLY);
 rand = read(fle, buffer, letters);
-written = write(STDOUT_FILENO, buffer, r);
+written = write(STDOUT_FILENO, buffer, rand);
 
 if (fle == -1 || rand == -1 || written == -1 || written != rand)
 {
