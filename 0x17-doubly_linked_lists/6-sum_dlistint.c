@@ -9,13 +9,13 @@ int sum_dlistint(dlistint_t *head)
 {
 dlistint_t *temp_node;
 int result = 0;
-
 temp_node = head;
 if (temp_node != NULL)
 {
 while (temp_node->prev != NULL)
+{
 temp_node = temp_node->prev;
-
+}
 while (temp_node != NULL)
 {
 result += temp_node->n;

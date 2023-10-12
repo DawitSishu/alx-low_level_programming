@@ -11,8 +11,9 @@ dlistint_t *temporary;
 if (head != NULL)
 {
 while (head->prev != NULL)
+{
 head = head->prev;
-
+}
 while (head != NULL)
 {
 temporary = head->next;

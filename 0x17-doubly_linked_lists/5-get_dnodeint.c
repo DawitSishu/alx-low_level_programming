@@ -10,15 +10,17 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
 dlistint_t *tempo;
 unsigned int i;
-
 tempo = head;
 if (tempo != NULL)
 {
 while (tempo->prev != NULL)
+{
 tempo = tempo->prev;
-
+}
 for (i = 0; (i < index) && (tempo != NULL); i++)
+{
 tempo = tempo->next;
+}
 return (tempo);
 }
 else
