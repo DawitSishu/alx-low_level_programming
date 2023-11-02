@@ -1,0 +1,26 @@
+#include "hash_tables.h"
+
+/**
+* hash_table_get - return balue of the key
+* @ht: hash table
+* @key: key
+*
+* Return: value or null
+*/
+
+char *hash_table_get(const hash_table_t *ht, const char *key)
+{
+unsigned long int idx;
+hash_node_t *temp = NULL;
+if (!ht || !key || strlen(key) == 0)
+return (NULL);
+idx = key_idx((const unsigned char *)key, ht->size);
+temp = ht->array[idx];
+while (temp)
+{
+if (strcmp(temp->key, key) == 0)
+return (temp->value);
+temp = temp->next;
+}
+return (NULL);
+}
