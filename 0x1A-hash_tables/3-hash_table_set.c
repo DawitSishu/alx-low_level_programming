@@ -1,32 +1,39 @@
 #include "hash_tables.h"
 
 /**
-* hash_table_add - adds an element to the hash table
-* @key: not null key
-* @new_value:  value of key
-*
-* Return: new node or NULL
-*/
+ * add_n_hash - add node at the begning
+ * @head: head of list
+ * @key: key
+ * @value: stored val
+ *
+ * Return: hash head
+ */
+hash_node_t *add_n_hash(hash_node_t **head, const char *key, const char *value)
+{
+hash_node_t *temp;
+temp = *head;
+while (temp != NULL)
+{
+if (strcmp(key, temp->key) == 0)
+{
+free(temp->value);
+temp->value = strdup(value);
+return (*head);
+}
+temp = temp->next;
+}
 
-hash_node_t *hash_table_add(const char *key, char *new_value)
-{
-hash_node_t *added_node = NULL;
-added_node = malloc(sizeof(hash_node_t));
-if (!added_node)
-{
-free(new_value);
+temp = malloc(sizeof(hash_node_t));
+
+if (temp == NULL)
 return (NULL);
-}
-added_node->key = strdup(key);
-added_node->value = new_value;
-if (!added_node->key || !added_node->value)
-{
-if (added_node->key)
-free(added_node->key);
-free(new_value);
-return (NULL);
-}
-return (added_node);
+
+temp->key = strdup(key);
+temp->value = strdup(value);
+temp->next = *head;
+*head = temp;
+
+return (*head);
 }
 
 
@@ -43,32 +50,19 @@ return (added_node);
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 unsigned long int idx;
-hash_node_t *added_node = NULL, *tmp = NULL;
-char *val = NULL;
-if (!ht || !key || !value || strlen(key) == 0)
-return (0);
-idx = key_idx((const unsigned char *)key, ht->size);
-tmp = ht->array[idx];
-val = strdup(value);
-if (!val)
-return (0);
-while (tmp)
+
+if (ht == NULL)
 {
-if (strcmp(tmp->key, key) == 0)
-{
-free(tmp->value);
-tmp->value = val;
-break;
+return (0);
 }
-tmp = tmp->next;
-}
-if (!tmp)
+if (key == NULL || *key == '\0')
 {
-added_node = hash_table_add(key, val);
-if (!added_node)
 return (0);
-added_node->next = ht->array[idx];
-ht->array[idx] = added_node;
+}
+idx = key_index((unsigned char *)key, ht->size);
+if (add_n_hash(&(ht->array[idx]), key, value) == NULL)
+{
+return (0);
 }
 return (1);
 }
