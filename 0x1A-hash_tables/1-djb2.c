@@ -14,7 +14,7 @@ int c;
 hashed = 5381;
 while ((c = *str++))
 {
-hashed = ((hashed << 5) + hashed) + c;
+hashed = ((hashed << 5) + hashed) +c;
 }
 return (hashed);
 }
